@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="">
+  <title>Contact Us</title>
+
+  <style>
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#closeBtn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.kontainer {
+  display: flex;
+  align-items: center; /* Untuk mengalign vertikal */
+}
+
+.teks {
+  flex: 1; /* Menggunakan sebagian ruang yang tersedia */
+  padding: 20px;
+}
+
+.gambar {
+  flex: 1; /* Menggunakan sebagian ruang yang tersedia */
+  text-align: center; /* Agar gambar berada di tengah horizontal */
+}
+
+.gambar img {
+  max-width: 100%; /* Agar gambar tidak melebihi kontainer */
+}
+
+
+  </style>
+
+</head>
+<body>
+    <div class="popup-container" id="popupContainer">
+        <div class="popup-content">
+          <h2 >Coming Soon</h2>
+          <p>We're working on something exciting. Stay tuned!</p>
+          <button id="closeBtn" onclick="location.href='portofolio.html'">Close</button>
+        </div>
+      </div>
+
+      <div class="kontainer">
+        <div class="teks">
+          <p>Ini adalah teks di sebelah kiri.</p>
+        </div>
+        <div class="gambar">
+          <img src="mekaca.jpg" alt="Gambar">
+        </div>
+      </div>
+      
+<script>
+const popupContainer = document.getElementById("popupContainer");
+const closeBtn = document.getElementById("closeBtn");
+
+closeBtn.addEventListener("click", () => {
+  popupContainer.style.display = "none";
+});
+
+window.addEventListener("load", () => {
+  popupContainer.style.display = "flex";
+});
+
+
+
+  </script>
+</body>
+</html>
